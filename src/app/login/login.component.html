@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+<div class="col-10 offset-1 col-lg-8 offset-lg-2 div-wrapper d-flex justify-content-center align-items-center">
+<form [formGroup]="loginForm" (ngSubmit)="submit()">
+<h1 style="text-align: center">Login</h1>
+  <!--UserName-->
+  <div class="formGroup my-4">
+    <label for="UserName">User Name</label>
+    <input
+      formControlName="UserName"
+      id="UserName"
+      type="text"
+      class="form-control ">
+    <div *ngIf= "this.loginForm.controls.UserName.invalid && (this.loginForm.controls.UserName.dirty || this.loginForm.controls.UserName.touched)"
+        class="alert alert-danger">
+      <div *ngIf="this.loginForm.controls.UserName.errors.required">
+        User Name is Required.
+      </div>
+    </div>
+  </div>
+  <!--Password-->
+  <div class="formGroup">
+    <label for="password">Password</label>
+    <input
+      formControlName="password"
+      id="password"
+      type="text"
+      class="form-control">
+    <div *ngIf= "this.loginForm.controls.password.invalid && (this.loginForm.controls.password.dirty || this.loginForm.controls.password.touched)"
+        class="alert alert-danger">
+      <div *ngIf="this.loginForm.controls.password.errors.required">
+        Password is Required.
+      </div>
+    </div>
+  </div>
+
+</form>
+</div> 
+  </div>
+</div>
+
+
+
+  
