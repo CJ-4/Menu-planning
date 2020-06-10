@@ -13,7 +13,11 @@ export class LoginComponent implements OnInit {
   })
 
   constructor() { }
-
+ 
+  submit(){
+    console.log(this.loginForm.value);
+  }
+  
   ngOnInit() {
   }
 
