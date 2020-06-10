@@ -1,4 +1,5 @@
 # MenuPlanning
+A web site that allows for planning and managing meal plans. Allows for input of new meals and selection of favorites. To help busy families plan meals to make healthy choices.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
 
