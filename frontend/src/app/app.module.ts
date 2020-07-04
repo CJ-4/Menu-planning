@@ -8,6 +8,9 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LandingComponent } from './landing/landing.component';
 import { HomeComponent } from './home/home.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import { SearchComponent } from './search/search.component';
+import { NewMealComponent } from './new-meal/new-meal.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { HomeComponent } from './home/home.component';
     LoginComponent,
     RegistrationComponent,
     LandingComponent,
-    HomeComponent
+    HomeComponent,
+    CalendarComponent,
+    SearchComponent,
+    NewMealComponent
   ],
   imports: [
     BrowserModule,
