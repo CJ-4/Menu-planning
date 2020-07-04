@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Crazy Life Meal Planning</title>
+</head>
+<body>
+<div class="container">
+  
+<div class="col-10 offset-1 col-lg-8 offset-lg-2 div-wrapper d-flex justify-content-center align-items-center">
+  <form [formGroup]="registrationForm" (ngSubmit)="submit()">
+    <h1 style="text-align: center">Crazy Life Meal Planning</h1>
+    <h3 style="text-align: center">Registration</h3>
+      <!--First Name-->
+      <div class="formGroup my-4">
+        <label for="firstlName">First Name</label>
+        <input
+          formControlName="firstName"
+          id="firstName"
+          type="text"
+          class="form-control ">
+        <div *ngIf= "this.registrationForm.controls.firstName.invalid && (this.registrationForm.controls.firstName.dirty || this.registrationForm.controls.firstName.touched)"
+            class="alert alert-danger">
+          <div *ngIf="this.registrationForm.controls.firstName.errors.required">
+            Please enter your first name.
+          </div>
+        </div>
+      </div>
+      <!--Last Name-->
+      <div class="formGroup my-4">
+        <label for="lastName">Last Name</label>
+        <input
+          formControlName="lastName"
+          id="lastName"
+          type="text"
+          class="form-control ">
+        <div *ngIf= "this.registrationForm.controls.lastName.invalid && (this.registrationForm.controls.lastName.dirty || this.registrationForm.controls.lastName.touched)"
+            class="alert alert-danger">
+          <div *ngIf="this.registrationForm.controls.lastName.errors.required">
+            Please enter your first name.
+          </div>
+        </div>
+      </div>
+      <!--User Name-->
+      <div class="formGroup my-4">
+        <label for="userName">User Name</label>
+        <input
+          formControlName="userName"
+          id="userName"
+          type="text"
+          class="form-control ">
+        <div *ngIf= "this.registrationForm.controls.userName.invalid && (this.registrationForm.controls.userName.dirty || this.registrationForm.controls.userName.touched)"
+            class="alert alert-danger">
+          <div *ngIf="this.registrationForm.controls.userName.errors.required">
+            Please enter a user name.
+          </div>
+        </div>
+      </div>
+      <!--Password-->
+      <div class="formGroup my-4">
+        <label for="password">Password</label>
+        <input
+          formControlName="password"
+          id="password"
+          type="text"
+          class="form-control ">
+        <div *ngIf= "this.registrationForm.controls.password.invalid && (this.registrationForm.controls.password.dirty || this.registrationForm.controls.password.touched)"
+            class="alert alert-danger">
+          <div *ngIf="this.registrationForm.controls.password.errors.required">
+            Please enter a password.
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary"  type="submit">Submit</button>
+    </form>
+</div> 
+</div>
+</body>
