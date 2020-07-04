@@ -1,0 +1,60 @@
+body{
+  background-color: cornsilk;
+  background-size: cover;
+  position:reactive;
+}
+
+  
+  .container {
+    background-color: #333;
+    display: fixed;
+    flex-direction: column;
+    justify-content: right;
+    height: 100%;
+    margin-top: 25px;
+    
+    }
+          
+  
+  .draggable {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: move;
+    text-align: center;
+  }
+  
+  .draggable.dragging {
+    opacity: .5;
+  }
+  .btn-primary{
+    background-color: red;
+    color: white;
+    border-style: none;
+}
+label{
+  background-color: cornsilk;
+  width: 18%;
+  margin-top: 5px;
+  font-family: coppertone;
+  font-size: 25px;
+}
+#foodName{
+width: 50%;
+align-items: center;
+margin-top: 35%;
+}
+#date{
+  width: 45%;
+  margin-left: 45%;
+
+}
+#meal{
+  width: 30%;
+}
+h1{
+  background-color: rgb(129, 12, 12);
+  font-family: coppertone;
+  height: 90px;
+}

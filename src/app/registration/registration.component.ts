@@ -8,21 +8,37 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
 })
 export class RegistrationComponent implements OnInit {
   registrationForm = new FormGroup({
-    FullName: new FormControl('',[Validators.required]),
-    UserName: new FormControl('',[Validators.required]),
-    Password: new FormControl('',[Validators.required]),
-    RePass:  new FormControl('',[Validators.required])
+    firstName: new FormControl('',[Validators.required]),
+    lastName: new FormControl('',[Validators.required]),
+    userName: new FormControl('',[Validators.required]),
+    password: new FormControl('',[Validators.required]),
+    rePass:  new FormControl('',[Validators.required])
   })
 
   constructor() { }
  
   submit(){
     console.log(this.registrationForm.value);
+    this.submitUser(this.registrationForm.value);
   }
   
   ngOnInit() {
   }
 
+  submitUser(data){
+    fetch('http://127.0.0.1:3000/users', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+       body: JSON.stringify(data),
+      })
+      .then(response => {
+        if (response.status == 200) {
+          window.location.replace('../home');
+        }
+      });
+  }
   
 
 

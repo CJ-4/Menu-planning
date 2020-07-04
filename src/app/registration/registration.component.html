@@ -12,63 +12,63 @@
   <form [formGroup]="registrationForm" (ngSubmit)="submit()">
     <h1 style="text-align: center">Crazy Life Meal Planning</h1>
     <h3 style="text-align: center">Registration</h3>
-      <!--Name-->
+      <!--First Name-->
       <div class="formGroup my-4">
-        <label for="FullName">Full Name</label>
+        <label for="firstlName">First Name</label>
         <input
-          formControlName="FullName"
-          id="FullName"
+          formControlName="firstName"
+          id="firstName"
           type="text"
           class="form-control ">
-        <div *ngIf= "this.registrationForm.controls.FullName.invalid && (this.registrationForm.controls.FullName.dirty || this.registrationForm.controls.FullName.touched)"
+        <div *ngIf= "this.registrationForm.controls.firstName.invalid && (this.registrationForm.controls.firstName.dirty || this.registrationForm.controls.firstName.touched)"
             class="alert alert-danger">
-          <div *ngIf="this.registrationForm.controls.FullName.errors.required">
-            Please enter your full name.
+          <div *ngIf="this.registrationForm.controls.firstName.errors.required">
+            Please enter your first name.
+          </div>
+        </div>
+      </div>
+      <!--Last Name-->
+      <div class="formGroup my-4">
+        <label for="lastName">Last Name</label>
+        <input
+          formControlName="lastName"
+          id="lastName"
+          type="text"
+          class="form-control ">
+        <div *ngIf= "this.registrationForm.controls.lastName.invalid && (this.registrationForm.controls.lastName.dirty || this.registrationForm.controls.lastName.touched)"
+            class="alert alert-danger">
+          <div *ngIf="this.registrationForm.controls.lastName.errors.required">
+            Please enter your first name.
           </div>
         </div>
       </div>
       <!--User Name-->
       <div class="formGroup my-4">
-        <label for="UserName">User Name</label>
+        <label for="userName">User Name</label>
         <input
-          formControlName="UserName"
-          id="UserName"
+          formControlName="userName"
+          id="userName"
           type="text"
           class="form-control ">
-        <div *ngIf= "this.registrationForm.controls.UserName.invalid && (this.registrationForm.controls.UserName.dirty || this.registrationForm.controls.UserName.touched)"
+        <div *ngIf= "this.registrationForm.controls.userName.invalid && (this.registrationForm.controls.userName.dirty || this.registrationForm.controls.userName.touched)"
             class="alert alert-danger">
-          <div *ngIf="this.registrationForm.controls.UserName.errors.required">
+          <div *ngIf="this.registrationForm.controls.userName.errors.required">
             Please enter a user name.
           </div>
         </div>
       </div>
       <!--Password-->
       <div class="formGroup my-4">
-        <label for="Password">Password</label>
+        <label for="password">Password</label>
         <input
-          formControlName="Password"
-          id="Password"
+          formControlName="password"
+          id="password"
           type="text"
           class="form-control ">
-        <div *ngIf= "this.registrationForm.controls.Password.invalid && (this.registrationForm.controls.Password.dirty || this.registrationForm.controls.Password.touched)"
+        <div *ngIf= "this.registrationForm.controls.password.invalid && (this.registrationForm.controls.password.dirty || this.registrationForm.controls.password.touched)"
             class="alert alert-danger">
-          <div *ngIf="this.registrationForm.controls.Password.errors.required">
+          <div *ngIf="this.registrationForm.controls.password.errors.required">
             Please enter a password.
-          </div>
-        </div>
-      </div>
-      <!--Password matching-->
-      <div class="formGroup my-4">
-        <label for="RePass">Renter Password</label>
-        <input
-          formControlName="RePass"
-          id="RePass"
-          type="text"
-          class="form-control ">
-        <div *ngIf= "this.registrationForm.controls.RePass.invalid && (this.registrationForm.controls.RePass.dirty || this.registrationForm.controls.RePass.touched)"
-            class="alert alert-danger">
-          <div *ngIf="this.registrationForm.controls.RePass.errors.required">
-            Please renter ypur password.
           </div>
         </div>
       </div>

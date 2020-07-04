@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 
+  <title>Document</title>
+</head>
+<header>
+  <h1 style="text-align: center">Crazy Life Meal Planning</h1>
+</header>
+<body>
+  <div id="meal" class="container" style="float:left">
+    <p class="draggable" draggable="true">Chicken Bake</p>
+    <p class="draggable" draggable="true">Spaghetti</p>
+    <p class="draggable" draggable="true">Pizza</p>
+  </div>
+  <br>
+  <div id="date" class="container" style="float:right">
+    <label for="date">Sunday</label>
+    <p></p>
+  </div>
+  <br>
+  <div id="date" class="container" style="float:right">
+    <label for="date">Monday</label>
+    <p></p>
+  </div>
+  <br>
+  <div id="date" class="container" style="float:right;">
+    <label for="date">Tuesday</label>
+    <p></p>
+  </div>
+  <br>
+  <div id="date" class="container" style="float:right">
+    <label for="date">Wednesday</label>
+    <p></p>
+  </div>
+  <br>
+  <div id="date" class="container" style="float:right">
+    <label for="date">Thursday</label>
+    <p></p>
+  </div>
+  <br>
+  <div id="date" class="container" style="float:right">
+    <label for="date">Friday</label>
+    <p></p>
+  </div>
+  <br>
+  <div id="date" class="container" style="float:right">
+    <label for="date">Saturday</label>
+    <p></p>
+  </div>
+  <br>
+ <form [formGroup]="mealForm" (ngSubmit)="submit()">
+      <div class="form-group">
+        <input formControlName="foodName" type="text" id="foodName" class="form-control">
+          <label for="foodName">Meal name to add</label>
+          <button class="btn btn-primary"  type="submit">Submit</button>
+      </div>
+  </form>
+</body>
+</html>

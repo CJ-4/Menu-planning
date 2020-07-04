@@ -16,12 +16,25 @@ export class LoginComponent implements OnInit {
  
   submit(){
     console.log(this.loginForm.value);
+    this.submitUser(this.loginForm.value);
   }
   
   ngOnInit() {
   }
 
-  
-
-
+  submitUser(data){
+    fetch('http://127.0.0.1:3000/users', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+       body: JSON.stringify(data),
+      })
+      .then(response => {
+        if (response.status == 200) {
+          window.location.replace('../home');
+        }
+      });
+  }
 }
+

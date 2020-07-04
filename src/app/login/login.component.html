@@ -42,6 +42,18 @@
           </div>
         </div>
       </div>
+      <div
+      *ngIf="
+        this.loginForm.controls.invalid &&
+        (this.loginForm.controls.dirty ||
+          this.loginForm.controls.touched)
+      "
+      class="alert alert-danger"
+    >
+      <div *ngIf="this.loginForm.controls.errors.required">
+        Input is required.
+      </div>
+    </div>
       <button class="btn btn-primary"  type="submit">Submit</button>
     </form>
 </div> 
