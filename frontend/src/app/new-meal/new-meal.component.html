@@ -1,0 +1,54 @@
+<body>
+<form [formGroup]="newMealForm" (ngSubmit)="submit()">
+    <h1 style="text-align: center">Crazy Life Meal Planning</h1>
+    <h3 style="text-align: center">Adding a New Meal</h3>
+      <!--Title-->
+      <div class="formGroup my-4">
+        <label for="title">Title</label>
+        <input
+          formControlName="title"
+          id="title"
+          type="text"
+          class="form-control ">
+        <div *ngIf= "this.newMealForm.controls.title.invalid && (this.newMealForm.controls.title.dirty || this.newMealForm.controls.title.touched)"
+            class="alert alert-danger">
+          <div *ngIf="this.newMealForm.controls.title.errors.required">
+            Title for the meal is Required.
+          </div>
+        </div>
+      </div>
+      <!--Discription-->
+      <div class="formGroup">
+        <label for="discription">Discription</label>
+        <input
+          formControlName="discription"
+          id="discription"
+          type="text"
+          class="form-control">
+        <div *ngIf= "this.newMealForm.controls.discription.invalid && (this.newMealForm.controls.discription.dirty || this.newMealForm.controls.discription.touched)"
+            class="alert alert-danger">
+          <div *ngIf="this.newMealForm.controls.password.errors.required">
+            Please provide a discription.
+          </div>
+        </div>
+      </div>
+      <!--ingredients-->
+      <div class="formGroup ">
+        <label for="ingredients">Ingredients</label>
+        <input
+          formControlName="ingredients"
+          id="ingredients"
+          type="text"
+          class="form-control ">
+      </div>
+      <input type="radio" id="Breakfast" name="Breakfast" value="Breakfast" style="text-align: center;">
+      <label for="Breakfast">Breakfast</label>
+      <input type="radio" id="Lunch" name="Lunch" value="Lunch">
+      <label for="Lunch">Lunch</label>
+      <input type="radio" id="Dinner" name="Dinner" value="Dinner">
+      <label for="Dinner">Dinner</label>
+      <input type="radio" id="Other" name="Other" value="Other">
+      <label for="Other">Other</label><br>
+      <button class="btn btn-primary" type="submit" id="Submit">Submit</button>
+</form>
+</body>
