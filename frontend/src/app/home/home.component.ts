@@ -39,9 +39,9 @@ export class HomeComponent implements OnInit {
     })
 
     containers.forEach(container => {
-      container.addEventListener('dragover', e => {
-        e.preventDefault()
-        const afterElement = getDragAfterElement(container, e.clientY)
+      container.addEventListener('dragover', (event: MouseEvent) => {
+        event.preventDefault()
+        const afterElement = getDragAfterElement(container, event.clientY)
         const draggable = document.querySelector('.dragging')
         if (afterElement == null) {
           container.appendChild(draggable)
